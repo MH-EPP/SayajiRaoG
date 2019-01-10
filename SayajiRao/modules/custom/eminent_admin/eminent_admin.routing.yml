@@ -1,0 +1,60 @@
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+eminent_admin.AddPlaylist:
+  path: '/playlist/{media_id}/add'
+  defaults:
+    _form: '\Drupal\eminent_admin\Form\AddPlayListForm'
+    _title: 'Add Play list'
+  requirements:
+    _permission: 'add playlist'
+eminent_admin.RemoveMediaFromPlaylist:
+  path: '/playlist/{playlist_id}/remove/{media_id}'
+  defaults:
+    _form: '\Drupal\eminent_admin\Form\RemoveMediaFromPlaylist'
+    _title: 'Remove Media From Play list'
+  requirements:
+    _permission: 'remove media from playlist'
+eminent_admin.RemoveMediaFromTimeline:
+  path: '/timeline/{timeline_id}/remove/{media_id}'
+  defaults:
+    _form: '\Drupal\eminent_admin\Form\RemoveMediaFromTimeline'
+    _title: 'Remove Media From Timeline'
+  requirements:
+    _permission: 'remove media from timeline'
+eminent_admin.AddTimeline:
+  path: '/timeline/{media_id}/add'
+  defaults:
+    _form: '\Drupal\eminent_admin\Form\AddTimeLineForm'
+    _title: 'Add Time Line'
+  requirements:
+    _permission: 'add timeline'
+eminent_admin.CreatePlaylist:
+  path: '/playlist/{media_id}/create'
+  defaults:
+    _controller: '\Drupal\eminent_admin\Controller\MediaAdd::createPlaylist'
+    _title: 'Add Playlist'
+  requirements:
+    _permission: 'add playlist'
+eminent_admin.CreateQuote:
+  path: '/quote/add'
+  defaults:
+    _controller: '\Drupal\eminent_admin\Controller\MediaAdd::createQuote'
+    _title: 'Add Quote'
+  requirements:
+    _permission: 'add quote'
+eminent_admin.CreateTimeline:
+  path: '/timeline/{media_id}/create'
+  defaults:
+    _controller: '\Drupal\eminent_admin\Controller\MediaAdd::createTimeline'
+    _title: 'Add Time Line'
+  requirements:
+    _permission: 'add timeline'
+eminent_admin.addPlaylistTimeline:
+  path: '/add/{media_id}/{group}'
+  defaults:
+    _title: 'Add Media'
+    _controller: '\Drupal\eminent_admin\Controller\MediaAdd::addMedia'
+  requirements:
+    _permission: 'add playlist'

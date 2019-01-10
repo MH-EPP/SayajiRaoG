@@ -1,0 +1,11 @@
+name: 'RegEx Field Validation'
+type: module
+description: 'Provides RegEx validation option for text fields'
+# core: 8.x
+package: 'Field'
+
+# Information added by Drupal.org packaging script on 2018-08-27
+version: '8.x-1.5'
+core: '8.x'
+project: 'rfv'
+datestamp: 1535375887

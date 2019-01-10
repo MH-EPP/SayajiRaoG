@@ -1,0 +1,20 @@
+# Marathi translation of Exclude Node Title (8.x-1.0-beta1)
+# Copyright (c) 2016 by the Marathi translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Exclude Node Title (8.x-1.0-beta1)\n"
+"POT-Creation-Date: 2016-01-12 00:44+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Marathi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "enabled"
+msgstr "कार्यरत केले"
+msgid "None"
+msgstr "काहीच नाही"
+msgid "Node type"
+msgstr "धाग्याचा प्रकार"
