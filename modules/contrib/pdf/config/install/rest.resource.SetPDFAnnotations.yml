@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - pdf
+    - serialization
+    - user
+id: SetPDFAnnotations
+plugin_id: SetPDFAnnotations
+granularity: resource
+configuration:
+  methods:
+    - POST
+    - DELETE
+    - PATCH
+  formats:
+    - json
+  authentication:
+    - cookie

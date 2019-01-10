@@ -1,0 +1,86 @@
+<?php
+	function pdf_schema() {
+
+	 $schema['pdf_track'] = array(
+
+	   'description' => 'Custom Table to track pdf highlights.',
+
+	   'fields' => array(
+
+	     'track_id' => array(
+	       'type' => 'serial',
+	       'unsigned' => TRUE,
+	       'not null' => TRUE,
+	     ),
+
+	     'user_id' => array(
+	       'type' => 'int',
+	       'unsigned' => TRUE,
+	       'not null' => TRUE,
+	     ),
+
+	     'document_id' => array(
+	       'type' => 'int',
+	       'unsigned' => TRUE,
+	       'not null' => TRUE,
+	     ),
+
+	     'page_index' => array(
+	       'type' => 'int',
+	       'unsigned' => TRUE,
+	       'not null' => TRUE,
+	     ),
+
+	     'track_type' => array(
+	       'description' => 'Possible values are highlight, bookmark, resume, annotation',     
+	       'type' => 'varchar',
+	       'length' => 12,
+	       'not null' => TRUE,	       
+	     ),
+
+	     'highlight_array' => array(
+	       'description' => 'serialized coordinates',
+	       'type' => 'text',      
+	       'serialize' => TRUE
+	     ),
+
+	     'message' => array(
+	       'description' => 'annotation message',
+	       'type' => 'text',      
+	     ),
+
+	     'color' => array(
+	       'description' => 'annotation color',
+	       'type' => 'char',
+	       'length' => 7,
+	       'default' => '#000080',     
+	     ),
+
+	     'is_deleted' => array(
+	       'description' => 'Possible values Y,N',
+	       'type' => 'char',
+	       'length' => 1,
+	       'default' => 'N',
+	     ), 
+
+	     'created_on' => array(	       
+	       'type' => 'datetime',
+           'mysql_type' => 'datetime',
+	     ),
+
+	     'updated_on' => array(	       
+	       'type' => 'datetime',
+           'mysql_type' => 'datetime',
+	     ),
+	   ),
+	   
+	   'primary key' => array('track_id'),
+
+	   'indexes' => array(            
+            'user_id' => array('user_id','document_id'),                     
+        ),
+
+	 );
+
+	 return $schema;
+}

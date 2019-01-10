@@ -1,0 +1,9 @@
+services:
+   # Service name.
+  pdf.PDFDbLogic:
+     # Class that renders the service. As Drupal 8 uses PSR-4 autoloader, we skip src.
+    class: Drupal\pdf\PDFDbLogic
+     # Arguments that will come to the class constructor.
+    arguments: ['@database']     
+    tags:
+    - { name: backend_overridable }
