@@ -1,4 +1,0 @@
-spamspan.test:
-  title: 'Spamspan test page'
-  route_name: spamspan.test
-  base_route: filter.admin_overview
